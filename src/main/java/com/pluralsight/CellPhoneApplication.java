@@ -35,13 +35,13 @@ public class CellPhoneApplication {
         String owner = scanner.nextLine();
         cellPhone1.setOwner(owner);
 
-        // Test dial
-        System.out.print("---Testing\n");
-        cellPhone1.dial("666-666-1234");
-
-        // Test display
+        // Display
         display(cellPhone1);
         display(cellPhone2);
+
+        // Dial
+        cellPhone1.dial(cellPhone2.getPhoneNumber());
+        cellPhone2.dial(cellPhone1.getPhoneNumber());
 
     }
 
@@ -52,6 +52,6 @@ public class CellPhoneApplication {
         System.out.printf("Carrier: %s\n", phone.getCarrier());
         System.out.printf("Phone Number: %s\n", phone.getPhoneNumber());
         System.out.printf("Owner: %s\n", phone.getOwner());
-        System.out.println("---");
+        System.out.print("---\n");
     }
 }

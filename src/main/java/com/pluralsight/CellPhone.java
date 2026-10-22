@@ -55,6 +55,6 @@ public class CellPhone{
     }
 
     public void dial(String phoneNumber){
-        System.out.printf("%s's phone is calling %s", this.owner, phoneNumber);
+        System.out.printf("%s's phone is calling %s\n", this.owner, phoneNumber);
     }
 }
