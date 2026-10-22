@@ -15,6 +15,10 @@ public class CellPhone{
         this.owner = owner;
     }
 
+    public CellPhone(){
+
+    }
+
     public long getSerialNumber(){
         return this.serialNumber;
     }
