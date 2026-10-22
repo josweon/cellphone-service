@@ -8,6 +8,7 @@ public class CellPhoneApplication {
         Scanner scanner = new Scanner(System.in);
         CellPhone myCellPhone = new CellPhone();
 
+        // Get
         System.out.print("What is the serial number? ");
         String input1 = scanner.nextLine();
         long serialNumber = Long.parseLong(input1);
@@ -29,7 +30,13 @@ public class CellPhoneApplication {
         String owner = scanner.nextLine();
         myCellPhone.setOwner(owner);
 
-        // Test
-        System.out.println(myCellPhone.getOwner());
+        // Set
+        System.out.print("\n---\n*Customer Information*\n");
+        System.out.printf("Serial Number: %d\n", myCellPhone.getSerialNumber());
+        System.out.printf("Model: %s\n", myCellPhone.getModel());
+        System.out.printf("Carrier: %s\n", myCellPhone.getCarrier());
+        System.out.printf("Phone Number: %s\n", myCellPhone.getPhoneNumber());
+        System.out.printf("Owner: %s\n", myCellPhone.getOwner());
+        System.out.println("---");
     }
 }
