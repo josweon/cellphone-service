@@ -23,6 +23,9 @@ public class CellPhone{
         return this.serialNumber;
     }
     public void setSerialNumber(long serialNumber){
+        if (serialNumber < 1_000_000 || serialNumber> 9_999_999){
+            System.out.println("--Invalid input");
+        }
         this.serialNumber = serialNumber;
     }
 
@@ -56,5 +59,8 @@ public class CellPhone{
 
     public void dial(String phoneNumber){
         System.out.printf("%s's phone is calling %s\n", this.owner, phoneNumber);
+    }
+    public void dial(CellPhone phone){
+        System.out.printf("%s's phone is calling %s\n", this.owner, phone.phoneNumber);
     }
 }
